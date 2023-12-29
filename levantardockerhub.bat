@@ -1,0 +1,2 @@
+docker run -d --name selenium-hub -p 4444:4444 selenium/hub:4.12.1
+docker run -d --link selenium-hub:hub -e SE_EVENT_BUS_HOST=hub -p 5900:5900 -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-chrome:110.0
